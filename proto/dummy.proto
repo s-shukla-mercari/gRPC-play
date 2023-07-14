@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+
+package proto;
+option go_package = "pb/dummy";
+
+service DummyService{
+  rpc DummyMethod(DummyRequest) returns (DummyResponse);
+}
+
+message DummyRequest {
+  string name = 1;
+}
+
+message DummyResponse {
+  string message = 1;
+}
